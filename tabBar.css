@@ -1,0 +1,35 @@
+.monaco-workbench .part.editor>.content .editor-group-container.active>.title .tabs-container>.tab.active{
+    border-bottom: 3px solid;
+    border-image-source: linear-gradient(to left, #93d479, #113c00);
+    border-image-slice: 1;
+    border-left: 0;
+    border-right: 0 !important;
+    border-top: 0;
+    --tab-border-bottom-color: transparent !important;
+    animation: gradient-border-tab 2s infinite alternate;
+}
+
+.monaco-editor .line-numbers.active-line-number{
+  color: #000000;
+  font-weight: 600;
+}
+
+/* .monaco-editor .margin-view-overlays .current-line:first-child, .monaco-editor .view-overlays .current-line:first-child{
+  background: #93d479;
+} */
+
+.current-line.current-line-margin-both:first-child {
+  background: #93d479;
+  clip-path: polygon(85% 0%, 100% 50%, 75% 135%, 0% 100%, 13% 50%, 0% 0%);
+  transition: all 0.5s ease-in-out;
+  padding-right: 5px;
+}
+
+@keyframes gradient-border-tab {
+    0% {
+      border-image-source: linear-gradient(to left, #93d479, #113c00);
+    }
+    100% {
+      border-image-source: linear-gradient(to left, #113c00, #93d479);
+    }
+  }
